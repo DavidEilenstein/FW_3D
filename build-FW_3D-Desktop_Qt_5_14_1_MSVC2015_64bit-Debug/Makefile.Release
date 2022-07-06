@@ -261,6 +261,12 @@ release\moc_fw_bot.cpp: ..\FW_3D\fw_bot.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdebug.h \
@@ -278,8 +284,6 @@ release\moc_fw_bot.cpp: ..\FW_3D\fw_bot.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayoutitem.h \
@@ -293,9 +297,6 @@ release\moc_fw_bot.cpp: ..\FW_3D\fw_bot.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpolygon.h \
@@ -381,6 +382,12 @@ release\moc_fw_bot_random.cpp: ..\FW_3D\fw_bot_random.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdebug.h \
@@ -398,8 +405,6 @@ release\moc_fw_bot_random.cpp: ..\FW_3D\fw_bot_random.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayoutitem.h \
@@ -413,9 +418,6 @@ release\moc_fw_bot_random.cpp: ..\FW_3D\fw_bot_random.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpolygon.h \
@@ -505,6 +507,12 @@ release\moc_fw_bot_tree.cpp: ..\FW_3D\fw_bot_tree.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdebug.h \
@@ -522,8 +530,6 @@ release\moc_fw_bot_tree.cpp: ..\FW_3D\fw_bot_tree.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayoutitem.h \
@@ -537,9 +543,6 @@ release\moc_fw_bot_tree.cpp: ..\FW_3D\fw_bot_tree.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpolygon.h \
@@ -679,6 +682,7 @@ release\moc_fw_field_plot.cpp: ..\FW_3D\fw_field_plot.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
@@ -925,7 +929,6 @@ release\moc_fw_field_plot.cpp: ..\FW_3D\fw_field_plot.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dtheme.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QLinearGradient \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QFont \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dscene.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dcamera.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dobject.h \
@@ -1106,6 +1109,7 @@ release\moc_fw_mainwindow.cpp: ..\FW_3D\fw_mainwindow.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdatetime.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\FW_3D\fw_field.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
@@ -1350,7 +1354,6 @@ release\moc_fw_mainwindow.cpp: ..\FW_3D\fw_mainwindow.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dtheme.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QLinearGradient \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QFont \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dscene.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dcamera.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dobject.h \
@@ -1487,6 +1490,12 @@ release\fw_bot.obj: ..\FW_3D\fw_bot.cpp ..\FW_3D\fw_bot.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdebug.h \
@@ -1504,8 +1513,6 @@ release\fw_bot.obj: ..\FW_3D\fw_bot.cpp ..\FW_3D\fw_bot.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayoutitem.h \
@@ -1519,9 +1526,6 @@ release\fw_bot.obj: ..\FW_3D\fw_bot.cpp ..\FW_3D\fw_bot.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpolygon.h \
@@ -1604,6 +1608,12 @@ release\fw_bot_random.obj: ..\FW_3D\fw_bot_random.cpp ..\FW_3D\fw_bot_random.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdebug.h \
@@ -1621,8 +1631,6 @@ release\fw_bot_random.obj: ..\FW_3D\fw_bot_random.cpp ..\FW_3D\fw_bot_random.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayoutitem.h \
@@ -1636,9 +1644,6 @@ release\fw_bot_random.obj: ..\FW_3D\fw_bot_random.cpp ..\FW_3D\fw_bot_random.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpolygon.h \
@@ -1725,6 +1730,12 @@ release\fw_bot_tree.obj: ..\FW_3D\fw_bot_tree.cpp ..\FW_3D\fw_bot_tree.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdebug.h \
@@ -1742,8 +1753,6 @@ release\fw_bot_tree.obj: ..\FW_3D\fw_bot_tree.cpp ..\FW_3D\fw_bot_tree.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayoutitem.h \
@@ -1757,9 +1766,6 @@ release\fw_bot_tree.obj: ..\FW_3D\fw_bot_tree.cpp ..\FW_3D\fw_bot_tree.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpolygon.h \
@@ -1834,6 +1840,12 @@ release\fw_field.obj: ..\FW_3D\fw_field.cpp ..\FW_3D\fw_field.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qbytearraylist.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qregexp.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdebug.h \
@@ -1860,8 +1872,6 @@ release\fw_field.obj: ..\FW_3D\fw_field.cpp ..\FW_3D\fw_field.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qtgui-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayout.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\qlayoutitem.h \
@@ -1875,9 +1885,6 @@ release\fw_field.obj: ..\FW_3D\fw_field.cpp ..\FW_3D\fw_field.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qrgba64.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\qpolygon.h \
@@ -2010,6 +2017,7 @@ release\fw_field_plot.obj: ..\FW_3D\fw_field_plot.cpp ..\FW_3D\fw_field_plot.h \
 		..\FW_3D\fw_field.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtWidgets\QGridLayout \
@@ -2256,7 +2264,6 @@ release\fw_field_plot.obj: ..\FW_3D\fw_field_plot.cpp ..\FW_3D\fw_field_plot.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dtheme.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QLinearGradient \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QFont \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dscene.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dcamera.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dobject.h \
@@ -2434,6 +2441,7 @@ release\main.obj: ..\FW_3D\main.cpp ..\FW_3D\fw_mainwindow.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdatetime.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\FW_3D\fw_field.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
@@ -2678,7 +2686,6 @@ release\main.obj: ..\FW_3D\main.cpp ..\FW_3D\fw_mainwindow.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dtheme.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QLinearGradient \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QFont \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dscene.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dcamera.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dobject.h \
@@ -2863,6 +2870,7 @@ release\fw_mainwindow.obj: ..\FW_3D\fw_mainwindow.cpp ..\FW_3D\fw_mainwindow.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\qdatetime.h \
 		..\FW_3D\FW_Enum.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QStringList \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\FW_3D\fw_field.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QString \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtCore\QDebug \
@@ -3107,7 +3115,6 @@ release\fw_mainwindow.obj: ..\FW_3D\fw_mainwindow.cpp ..\FW_3D\fw_mainwindow.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dtheme.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QLinearGradient \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QFont \
-		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtGui\QColor \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dscene.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dcamera.h \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\include\QtDataVisualization\q3dobject.h \

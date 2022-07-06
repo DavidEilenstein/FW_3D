@@ -32,7 +32,7 @@ private slots:
 
     bool check_end();
 
-    void ConsolePrint(QString text);
+    void ConsolePrint(QString text, size_t col_index = COL_DEFAULT);
 
     void MakeMove_Player(int x, int y);
     void MakeMove_Bot();

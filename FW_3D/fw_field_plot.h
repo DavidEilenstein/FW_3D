@@ -2,6 +2,7 @@
 #define FW_FIELD_PLOT_H
 
 #include <QWidget>
+#include <FW_Enum.h>
 #include <fw_field.h>
 
 //Qt-Datavisualization
@@ -27,6 +28,7 @@ public:
     bool        init(QGridLayout *layout);
     bool        clear();
     bool        plot(FW_Field *pField);
+    void        set_color(QString col_string);
 
 signals:
 

@@ -18,6 +18,7 @@ bool FW_Field_Plot::init(QGridLayout *layout)
     container_widget_scatter = createWindowContainer(graph_scatter);
     layout_in_ui->addWidget(container_widget_scatter, 0, 0);
     graph_scatter->scene()->activeCamera()->setCameraPreset(Q3DCamera::CameraPresetDirectlyAbove);
+    graph_scatter->activeTheme()->setWindowColor(Qt::white);
 
     state_ui_init = true;
     return true;
@@ -64,13 +65,13 @@ bool FW_Field_Plot::plot(FW_Field *pField)
 
         //color
         switch (i) {
-        case MARKER_BLACK:  vSeries[i]->setBaseColor(Qt::black);    break;
-        case MARKER_WHITE:  vSeries[i]->setBaseColor(Qt::white);    break;
-        case MARKER_EMPTY:  vSeries[i]->setBaseColor(Qt::gray);     break;
-        default:                                                    return false;}
+        case MARKER_BOT:    vSeries[i]->setBaseColor(QSl_Colors[COL_BOT]);      break;
+        case MARKER_PLAYER: vSeries[i]->setBaseColor(QSl_Colors[COL_PLAYER]);   break;
+        case MARKER_EMPTY:  vSeries[i]->setBaseColor(QSl_Colors[COL_EMPTY]);    break;
+        default:                                                                return false;}
 
-        if(i == MARKER_BLACK || i == MARKER_WHITE)
-            vSeries[i]->setItemSize(0.9);
+        if(i == MARKER_BOT || i == MARKER_PLAYER)
+            vSeries[i]->setItemSize(0.90);
         else
             vSeries[i]->setItemSize(0.15);
 
@@ -120,4 +121,9 @@ bool FW_Field_Plot::plot(FW_Field *pField)
         vSeries[s]->dataProxy()->addItems(vDataArray[s]);
 
     return true;
+}
+
+void FW_Field_Plot::set_color(QString col_string)
+{
+    graph_scatter->activeTheme()->setWindowColor(QColor(col_string));
 }

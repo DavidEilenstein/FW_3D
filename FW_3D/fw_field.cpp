@@ -248,10 +248,10 @@ bool FW_Field::check_win(int x, int y, int z, int dx, int dy, int dz, char *w)
         z += dz;
     }
 
-    if(m == MARKER_WHITE)
-        *w = WIN_WHITE;
-    else if(m == MARKER_BLACK)
-        *w = WIN_BLACK;
+    if(m == MARKER_PLAYER)
+        *w = WIN_PLAYER;
+    else if(m == MARKER_BOT)
+        *w = WIN_BOT;
     else
         return false;
 

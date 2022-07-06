@@ -39,12 +39,21 @@ bool FW_MainWindow::check_end()
     if(!Field.check_end(&w))
         return false;
 
-    if(w == WIN_WHITE)
-        ConsolePrint("Congratulations, you defeated the filthy bot in " + QString::number(player_moves) + " moves :-)");
-    else if(w == WIN_BLACK)
-        ConsolePrint("Ahahahaha! The bot beat the shit out of your dumb tactics :-P");
+    if(w == WIN_PLAYER)
+    {
+        ConsolePrint("Congratulations, you defeated the filthy bot in " + QString::number(player_moves) + " moves :-)", COL_PLAYER);
+        FieldPlot.set_color(QSl_Colors[COL_PLAYER]);
+    }
+    else if(w == WIN_BOT)
+    {
+        ConsolePrint("Ahahahaha! The bot beat the shit out of your dumb tactics :-P", COL_BOT);
+        FieldPlot.set_color(QSl_Colors[COL_BOT]);
+    }
     else if(w == WIN_DRAW)
-        ConsolePrint("Nice match! It is a draw.");
+    {
+        ConsolePrint("Nice match! It is a draw.", COL_EMPTY);
+        FieldPlot.set_color(QSl_Colors[COL_EMPTY]);
+    }
 
     ConsolePrint(": : : : : : : : : : : : : : : : : : : : : : : : : : :");
     ui->groupBox_FieldControl->setEnabled(false);
@@ -53,9 +62,19 @@ bool FW_MainWindow::check_end()
     return true;
 }
 
-void FW_MainWindow::ConsolePrint(QString text)
+void FW_MainWindow::ConsolePrint(QString text, size_t col_index)
 {
+    /*
+    switch (col_index) {
+    case COL_PLAYER:    QSL_ConsoleText.append("[" + QDateTime::currentDateTime().time().toString() + "] " + "<span style= \"color:#00ff00;\">" + text + "</span> ");   break;
+    case COL_BOT:       QSL_ConsoleText.append("[" + QDateTime::currentDateTime().time().toString() + "] " + "<span style= \"color:#0000ff;\">" + text + "</span> ");   break;
+    case COL_EMPTY:     QSL_ConsoleText.append("[" + QDateTime::currentDateTime().time().toString() + "] " + "<span style= \"color:#808080;\">" + text + "</span> ");   break;
+    case COL_ERROR:     QSL_ConsoleText.append("[" + QDateTime::currentDateTime().time().toString() + "] " + "<span style= \"color:#ff0000;\">" + text + "</span> ");   break;
+    default:            QSL_ConsoleText.append("[" + QDateTime::currentDateTime().time().toString() + "] " + "<span style= \"color:#000000;\">" + text + "</span> ");   break;}
+    */
+
     QSL_ConsoleText.append("[" + QDateTime::currentDateTime().time().toString() + "] " + text);
+
     if(QSL_ConsoleText.size() > consoleLimit)
         QSL_ConsoleText.pop_front();
 
@@ -80,15 +99,15 @@ void FW_MainWindow::MakeMove_Player(int x, int y)
 
     if(Field.is_full_stack(x, y))
     {
-        ConsolePrint("Are you blind??? " + QS_xy + " is a full stack...");
+        ConsolePrint("Are you blind??? " + QS_xy + " is a full stack...", COL_ERROR);
         return;
     }
 
 
-    ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Player (white)");
-    Field.insert_marker(x, y, MARKER_WHITE);
+    ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Player", COL_PLAYER);
+    Field.insert_marker(x, y, MARKER_PLAYER);
     Plot_Show();
-    FieldHighlight(x, y, MARKER_WHITE);
+    FieldHighlight(x, y, MARKER_PLAYER);
 
     player_moves++;
 
@@ -113,7 +132,7 @@ void FW_MainWindow::MakeMove_Bot()
     //finish tripple?
     if(!made_move && ui->checkBox_TrippleAttack->isChecked())
     {
-        if(Field.check_tripples(&x, &y, MARKER_BLACK))
+        if(Field.check_tripples(&x, &y, MARKER_BOT))
         {
             made_move = true;
             bot_comment = " - finished tripple";
@@ -123,7 +142,7 @@ void FW_MainWindow::MakeMove_Bot()
     //defend tripple?
     if(!made_move && ui->checkBox_TrippleDefend->isChecked())
     {
-        if(Field.check_tripples(&x, &y, MARKER_WHITE))
+        if(Field.check_tripples(&x, &y, MARKER_PLAYER))
         {
             made_move = true;
             bot_comment = " - defended tripple";
@@ -152,7 +171,7 @@ void FW_MainWindow::MakeMove_Bot()
             break;
 
         default:
-            ConsolePrint("INVALID BOT");
+            ConsolePrint("INVALID BOT", COL_ERROR);
             break;
         }
     }
@@ -161,15 +180,15 @@ void FW_MainWindow::MakeMove_Bot()
 
     if(Field.is_full_stack(x, y))
     {
-        ConsolePrint("Bot seems to be an idiot... Wanted to set marker at " + QS_xy + ", which is a full stack...");
+        ConsolePrint("Bot seems to be an idiot... Wanted to set marker at " + QS_xy + ", which is a full stack...", COL_ERROR);
         init_field();
         return;
     }
 
-    ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Bot (black)" + bot_comment);
-    Field.insert_marker(x, y, MARKER_BLACK);
+    ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Bot" + bot_comment, COL_BOT);
+    Field.insert_marker(x, y, MARKER_BOT);
     Plot_Show();
-    FieldHighlight(x, y, MARKER_BLACK);
+    FieldHighlight(x, y, MARKER_BOT);
 
     if(check_end())
         return;
@@ -182,10 +201,10 @@ void FW_MainWindow::MakeMove_Bot()
 void FW_MainWindow::FieldHighlight(int x, int y, char m)
 {
     QString stylesheet;
-    if(m == MARKER_BLACK)
-        stylesheet = "Background-color: rgb(0, 0, 0);\ncolor: rgb(255, 255, 255);\nfont-size: 15px;";
-    else if(m == MARKER_WHITE)
-        stylesheet = "Background-color: rgb(255, 255, 255);\ncolor: rgb(0, 0, 0);\nfont-size: 15px;";
+    if(m == MARKER_BOT)
+        stylesheet = "Background-color: " + QSl_Colors[COL_BOT] + ";\ncolor: rgb(255, 255, 255);\nfont-size: 15px;";
+    else if(m == MARKER_PLAYER)
+        stylesheet = "Background-color: " + QSl_Colors[COL_PLAYER] + ";\ncolor: rgb(255, 255, 255);\nfont-size: 15px;";
     else
         stylesheet = "";
 
@@ -249,7 +268,7 @@ void FW_MainWindow::on_spinBox_Bot_Param_valueChanged(int arg1)
     case BOT_TREE:
     {
         Bot_Tree.set_depths(arg1);
-        ConsolePrint("Changed BotTree's depth to " + QString::number(arg1));
+        ConsolePrint("Changed BotTree's depth to " + QString::number(arg1), COL_BOT);
     }
         break;
 

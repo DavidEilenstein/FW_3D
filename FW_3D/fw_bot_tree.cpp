@@ -12,7 +12,7 @@ bool FW_Bot_Tree::make_move(FW_Field *pField, int *x, int *y, double *score)
     if(pField->check_full())
         return false;
 
-    if(!try_subtrees(*pField, x, y, score, MARKER_BLACK, 0))
+    if(!try_subtrees(*pField, x, y, score, MARKER_BOT, 0))
         return false;
 
     return true;
@@ -91,11 +91,11 @@ bool FW_Bot_Tree::try_subtrees(FW_Field field, int *x_best, int *y_best, double 
                 else
                 {
                     //no end? -> go deeper into the subtrees
-                    try_subtrees(field_copy, &subtree_x, &subtree_y, &subtree_score, next_marker == MARKER_BLACK ? MARKER_WHITE : MARKER_BLACK, current_depth + 1);
+                    try_subtrees(field_copy, &subtree_x, &subtree_y, &subtree_score, next_marker == MARKER_BOT ? MARKER_PLAYER : MARKER_BOT, current_depth + 1);
                 }
 
                 //cumulate subtree scores
-                double weight = (next_marker != MARKER_BLACK) ? (1.0) : (1.0 - subtree_score);
+                double weight = (next_marker != MARKER_BOT) ? (1.0) : (1.0 - subtree_score);
                 sum_subtrees_weights += weight;
                 sum_subtrees_scores += subtree_score * weight;
 
@@ -136,8 +136,8 @@ bool FW_Bot_Tree::try_subtrees(FW_Field field, int *x_best, int *y_best, double 
 double FW_Bot_Tree::score_from_winner(char winner)
 {
     switch (winner) {
-    case WIN_WHITE:     return 0.0;
-    case WIN_BLACK:     return 1.0;
+    case WIN_PLAYER:    return 0.0;
+    case WIN_BOT:       return 1.0;
     default:            return 0.5;
     }
 }
