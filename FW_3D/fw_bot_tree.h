@@ -15,7 +15,7 @@ class FW_Bot_Tree : public FW_Bot
 public:
     FW_Bot_Tree();
 
-    bool make_move(FW_Field* pField, int* x, int* y);
+    bool make_move(FW_Field* pField, int* x, int* y, double* score);
     bool set_depths(int d);
 
 private:

@@ -9,6 +9,8 @@ FW_MainWindow::FW_MainWindow(QWidget *parent)
 
     init_field();
     Populate_CB_Single(ui->comboBox_Bot_Mode, QSL_Bots, BOT_TREE);
+
+    setWindowTitle("Four wins 3D");
 }
 
 FW_MainWindow::~FW_MainWindow()
@@ -101,20 +103,28 @@ void FW_MainWindow::MakeMove_Bot()
     int x = 0;
     int y = 0;
 
+    QString bot_comment = "";
+
     bool made_move = false;
 
     //finish tripple?
     if(!made_move && ui->checkBox_TrippleAttack->isChecked())
     {
-        qDebug() << "check offense";
-        made_move = Field.check_tripples(&x, &y, MARKER_BLACK);
+        if(Field.check_tripples(&x, &y, MARKER_BLACK))
+        {
+            made_move = true;
+            bot_comment = " - finished tripple";
+        }
     }
 
     //defend tripple?
     if(!made_move && ui->checkBox_TrippleDefend->isChecked())
     {
-        qDebug() << "check defense";
-        made_move = Field.check_tripples(&x, &y, MARKER_WHITE);
+        if(Field.check_tripples(&x, &y, MARKER_WHITE))
+        {
+            made_move = true;
+            bot_comment = " - defended tripple";
+        }
     }
 
     //regular move calculated by bot
@@ -122,9 +132,25 @@ void FW_MainWindow::MakeMove_Bot()
     {
         switch (ui->comboBox_Bot_Mode->currentIndex())
         {
-        case BOT_RANDOM:    Bot_Random.make_move(&Field, &x, &y);   break;
-        case BOT_TREE:      Bot_Tree.  make_move(&Field, &x, &y);   break;
-        default:            ConsolePrint("INVALID BOT");            break;
+
+        case BOT_RANDOM:
+        {
+            Bot_Random.make_move(&Field, &x, &y);
+            bot_comment = " - random";
+        }
+            break;
+
+        case BOT_TREE:
+        {
+            double score;
+            Bot_Tree.make_move(&Field, &x, &y, &score);
+            bot_comment = " - score=" + QString::number(int(score * 100.0)) + "%";
+        }
+            break;
+
+        default:
+            ConsolePrint("INVALID BOT");
+            break;
         }
     }
 
@@ -137,7 +163,7 @@ void FW_MainWindow::MakeMove_Bot()
         return;
     }
 
-    ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Bot (black)");
+    ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Bot (black)" + bot_comment);
     Field.insert_marker(x, y, MARKER_BLACK);
     FieldHighlight(x, y, MARKER_BLACK);
 

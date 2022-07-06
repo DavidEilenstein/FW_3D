@@ -5,15 +5,14 @@ FW_Bot_Tree::FW_Bot_Tree()
 
 }
 
-bool FW_Bot_Tree::make_move(FW_Field *pField, int *x, int *y)
+bool FW_Bot_Tree::make_move(FW_Field *pField, int *x, int *y, double *score)
 {
     *x = 0;
     *y = 0;
     if(pField->check_full())
         return false;
 
-    double score;
-    if(!try_subtrees(*pField, x, y, &score, MARKER_BLACK, 0))
+    if(!try_subtrees(*pField, x, y, score, MARKER_BLACK, 0))
         return false;
 
     return true;
@@ -96,21 +95,9 @@ bool FW_Bot_Tree::try_subtrees(FW_Field field, int *x_best, int *y_best, double 
                 }
 
                 //cumulate subtree scores
-                if(next_marker == MARKER_BLACK)
-                {
-                    //bot's move:
-                    //no weight needed, bot can chose
-                    sum_subtrees_weights += 1.0;
-                    sum_subtrees_scores += subtree_score * 1.0;
-                }
-                else
-                {
-                    //human's move:
-                    //assume human prefers moves that are bad for the bot
-                    double weight = 1.0 - subtree_score;
-                    sum_subtrees_weights += weight;
-                    sum_subtrees_scores += subtree_score * weight;
-                }
+                double weight = (next_marker != MARKER_BLACK) ? (1.0) : (1.0 - subtree_score);
+                sum_subtrees_weights += weight;
+                sum_subtrees_scores += subtree_score * weight;
 
                 //better score? -> set as new best move
                 if(subtree_score > best_subtree_score)
