@@ -11,7 +11,8 @@ FW_MainWindow::FW_MainWindow(QWidget *parent)
     init_field();
     Populate_CB_Single(ui->comboBox_Bot_Mode, QSL_Bots, BOT_TREE);
 
-    setWindowTitle("Four wins 3D");
+    setWindowTitle("Four wins 3D - v2 (6.7.22)");
+    showMaximized();
 }
 
 FW_MainWindow::~FW_MainWindow()

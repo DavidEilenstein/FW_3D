@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -52,19 +53,28 @@ public:
     QPushButton *pushButton_Field_10;
     QPushButton *pushButton_Field_20;
     QPushButton *pushButton_Field_30;
+    QLabel *label_3;
     QGroupBox *groupBox_BotSettings;
     QGridLayout *gridLayout_4;
     QSpacerItem *verticalSpacer;
-    QLabel *label;
     QPushButton *pushButton_Restart;
+    QSpacerItem *verticalSpacer_3;
+    QLabel *label;
+    QFrame *line;
     QPushButton *pushButton_ClearConsole;
     QComboBox *comboBox_Bot_Mode;
+    QLabel *label_5;
     QCheckBox *checkBox_TrippleDefend;
-    QSpinBox *spinBox_Bot_Param;
     QCheckBox *checkBox_TrippleAttack;
+    QFrame *line_2;
+    QLabel *label_4;
+    QSpinBox *spinBox_Bot_Param;
+    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *verticalSpacer_4;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_5;
     QGridLayout *gridLayout_3D_Field;
+    QLabel *label_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -90,8 +100,8 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(groupBox_FieldControl->sizePolicy().hasHeightForWidth());
         groupBox_FieldControl->setSizePolicy(sizePolicy);
-        groupBox_FieldControl->setMinimumSize(QSize(250, 250));
-        groupBox_FieldControl->setMaximumSize(QSize(250, 250));
+        groupBox_FieldControl->setMinimumSize(QSize(250, 275));
+        groupBox_FieldControl->setMaximumSize(QSize(250, 275));
         gridLayout_2 = new QGridLayout(groupBox_FieldControl);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         gridLayout_FieldControl = new QGridLayout();
@@ -231,46 +241,88 @@ public:
 
         gridLayout_2->addLayout(gridLayout_FieldControl, 3, 3, 1, 1);
 
+        label_3 = new QLabel(groupBox_FieldControl);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy);
+        label_3->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(label_3, 0, 3, 1, 1);
+
 
         gridLayout->addWidget(groupBox_FieldControl, 0, 0, 1, 1);
 
         groupBox_BotSettings = new QGroupBox(centralwidget);
         groupBox_BotSettings->setObjectName(QString::fromUtf8("groupBox_BotSettings"));
-        groupBox_BotSettings->setMinimumSize(QSize(0, 250));
-        groupBox_BotSettings->setMaximumSize(QSize(250, 250));
+        groupBox_BotSettings->setMinimumSize(QSize(0, 275));
+        groupBox_BotSettings->setMaximumSize(QSize(250, 275));
         gridLayout_4 = new QGridLayout(groupBox_BotSettings);
         gridLayout_4->setSpacing(3);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         gridLayout_4->setContentsMargins(3, 3, 3, 3);
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_4->addItem(verticalSpacer, 6, 0, 1, 1);
+        gridLayout_4->addItem(verticalSpacer, 13, 0, 1, 1);
+
+        pushButton_Restart = new QPushButton(groupBox_BotSettings);
+        pushButton_Restart->setObjectName(QString::fromUtf8("pushButton_Restart"));
+
+        gridLayout_4->addWidget(pushButton_Restart, 14, 0, 1, 1);
+
+        verticalSpacer_3 = new QSpacerItem(20, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_4->addItem(verticalSpacer_3, 4, 0, 1, 1);
 
         label = new QLabel(groupBox_BotSettings);
         label->setObjectName(QString::fromUtf8("label"));
 
         gridLayout_4->addWidget(label, 0, 0, 1, 1);
 
-        pushButton_Restart = new QPushButton(groupBox_BotSettings);
-        pushButton_Restart->setObjectName(QString::fromUtf8("pushButton_Restart"));
+        line = new QFrame(groupBox_BotSettings);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
 
-        gridLayout_4->addWidget(pushButton_Restart, 7, 0, 1, 1);
+        gridLayout_4->addWidget(line, 6, 0, 1, 1);
 
         pushButton_ClearConsole = new QPushButton(groupBox_BotSettings);
         pushButton_ClearConsole->setObjectName(QString::fromUtf8("pushButton_ClearConsole"));
 
-        gridLayout_4->addWidget(pushButton_ClearConsole, 8, 0, 1, 1);
+        gridLayout_4->addWidget(pushButton_ClearConsole, 15, 0, 1, 1);
 
         comboBox_Bot_Mode = new QComboBox(groupBox_BotSettings);
         comboBox_Bot_Mode->setObjectName(QString::fromUtf8("comboBox_Bot_Mode"));
 
         gridLayout_4->addWidget(comboBox_Bot_Mode, 1, 0, 1, 1);
 
+        label_5 = new QLabel(groupBox_BotSettings);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+
+        gridLayout_4->addWidget(label_5, 8, 0, 1, 1);
+
         checkBox_TrippleDefend = new QCheckBox(groupBox_BotSettings);
         checkBox_TrippleDefend->setObjectName(QString::fromUtf8("checkBox_TrippleDefend"));
         checkBox_TrippleDefend->setChecked(true);
 
-        gridLayout_4->addWidget(checkBox_TrippleDefend, 4, 0, 1, 1);
+        gridLayout_4->addWidget(checkBox_TrippleDefend, 10, 0, 1, 1);
+
+        checkBox_TrippleAttack = new QCheckBox(groupBox_BotSettings);
+        checkBox_TrippleAttack->setObjectName(QString::fromUtf8("checkBox_TrippleAttack"));
+        checkBox_TrippleAttack->setChecked(true);
+
+        gridLayout_4->addWidget(checkBox_TrippleAttack, 9, 0, 1, 1);
+
+        line_2 = new QFrame(groupBox_BotSettings);
+        line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_4->addWidget(line_2, 12, 0, 1, 1);
+
+        label_4 = new QLabel(groupBox_BotSettings);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        gridLayout_4->addWidget(label_4, 3, 0, 1, 1);
 
         spinBox_Bot_Param = new QSpinBox(groupBox_BotSettings);
         spinBox_Bot_Param->setObjectName(QString::fromUtf8("spinBox_Bot_Param"));
@@ -281,11 +333,13 @@ public:
 
         gridLayout_4->addWidget(spinBox_Bot_Param, 2, 0, 1, 1);
 
-        checkBox_TrippleAttack = new QCheckBox(groupBox_BotSettings);
-        checkBox_TrippleAttack->setObjectName(QString::fromUtf8("checkBox_TrippleAttack"));
-        checkBox_TrippleAttack->setChecked(true);
+        verticalSpacer_2 = new QSpacerItem(20, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_4->addWidget(checkBox_TrippleAttack, 3, 0, 1, 1);
+        gridLayout_4->addItem(verticalSpacer_2, 11, 0, 1, 1);
+
+        verticalSpacer_4 = new QSpacerItem(20, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_4->addItem(verticalSpacer_4, 7, 0, 1, 1);
 
 
         gridLayout->addWidget(groupBox_BotSettings, 0, 1, 1, 1);
@@ -298,6 +352,14 @@ public:
         gridLayout_3D_Field->setObjectName(QString::fromUtf8("gridLayout_3D_Field"));
 
         gridLayout_5->addLayout(gridLayout_3D_Field, 0, 0, 1, 1);
+
+        label_2 = new QLabel(groupBox);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        sizePolicy.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy);
+        label_2->setAlignment(Qt::AlignCenter);
+
+        gridLayout_5->addWidget(label_2, 1, 0, 1, 1);
 
 
         gridLayout->addWidget(groupBox, 0, 2, 2, 1);
@@ -336,14 +398,19 @@ public:
         pushButton_Field_10->setText(QCoreApplication::translate("FW_MainWindow", "1 / 0", nullptr));
         pushButton_Field_20->setText(QCoreApplication::translate("FW_MainWindow", "2 / 0", nullptr));
         pushButton_Field_30->setText(QCoreApplication::translate("FW_MainWindow", "3 / 0", nullptr));
+        label_3->setText(QCoreApplication::translate("FW_MainWindow", "Set a marker to a position by clicking here", nullptr));
         groupBox_BotSettings->setTitle(QCoreApplication::translate("FW_MainWindow", "Settings", nullptr));
-        label->setText(QCoreApplication::translate("FW_MainWindow", "Bot mode:", nullptr));
         pushButton_Restart->setText(QCoreApplication::translate("FW_MainWindow", "Restart game", nullptr));
+        label->setText(QCoreApplication::translate("FW_MainWindow", "Bot mode:", nullptr));
         pushButton_ClearConsole->setText(QCoreApplication::translate("FW_MainWindow", "Clear console", nullptr));
+        label_5->setText(QCoreApplication::translate("FW_MainWindow", "Basic bot tatctics:", nullptr));
         checkBox_TrippleDefend->setText(QCoreApplication::translate("FW_MainWindow", "Defend obvious tripples", nullptr));
-        spinBox_Bot_Param->setPrefix(QCoreApplication::translate("FW_MainWindow", "depth=", nullptr));
         checkBox_TrippleAttack->setText(QCoreApplication::translate("FW_MainWindow", "Finish obvious tripples", nullptr));
+        label_4->setText(QCoreApplication::translate("FW_MainWindow", "(higher difficulties need more time to calculate)", nullptr));
+        spinBox_Bot_Param->setSuffix(QCoreApplication::translate("FW_MainWindow", " (difficulty)", nullptr));
+        spinBox_Bot_Param->setPrefix(QCoreApplication::translate("FW_MainWindow", "depth=", nullptr));
         groupBox->setTitle(QString());
+        label_2->setText(QCoreApplication::translate("FW_MainWindow", "hold right click and move: change perspective", nullptr));
     } // retranslateUi
 
 };

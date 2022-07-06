@@ -35,13 +35,13 @@
       <property name="minimumSize">
        <size>
         <width>250</width>
-        <height>250</height>
+        <height>275</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>250</width>
-        <height>250</height>
+        <height>275</height>
        </size>
       </property>
       <property name="title">
@@ -311,6 +311,22 @@
          </item>
         </layout>
        </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Set a marker to a position by clicking here</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -319,13 +335,13 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>250</height>
+        <height>275</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>250</width>
-        <height>250</height>
+        <height>275</height>
        </size>
       </property>
       <property name="title">
@@ -347,7 +363,7 @@
        <property name="spacing">
         <number>3</number>
        </property>
-       <item row="6" column="0">
+       <item row="13" column="0">
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -355,7 +371,27 @@
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>40</height>
+           <height>1</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="14" column="0">
+        <widget class="QPushButton" name="pushButton_Restart">
+         <property name="text">
+          <string>Restart game</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>1</height>
           </size>
          </property>
         </spacer>
@@ -367,14 +403,14 @@
          </property>
         </widget>
        </item>
-       <item row="7" column="0">
-        <widget class="QPushButton" name="pushButton_Restart">
-         <property name="text">
-          <string>Restart game</string>
+       <item row="6" column="0">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
         </widget>
        </item>
-       <item row="8" column="0">
+       <item row="15" column="0">
         <widget class="QPushButton" name="pushButton_ClearConsole">
          <property name="text">
           <string>Clear console</string>
@@ -384,7 +420,14 @@
        <item row="1" column="0">
         <widget class="QComboBox" name="comboBox_Bot_Mode"/>
        </item>
-       <item row="4" column="0">
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Basic bot tatctics:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
         <widget class="QCheckBox" name="checkBox_TrippleDefend">
          <property name="text">
           <string>Defend obvious tripples</string>
@@ -394,10 +437,37 @@
          </property>
         </widget>
        </item>
+       <item row="9" column="0">
+        <widget class="QCheckBox" name="checkBox_TrippleAttack">
+         <property name="text">
+          <string>Finish obvious tripples</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>(higher difficulties need more time to calculate)</string>
+         </property>
+        </widget>
+       </item>
        <item row="2" column="0">
         <widget class="QSpinBox" name="spinBox_Bot_Param">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="suffix">
+          <string> (difficulty)</string>
          </property>
          <property name="prefix">
           <string>depth=</string>
@@ -413,15 +483,31 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="QCheckBox" name="checkBox_TrippleAttack">
-         <property name="text">
-          <string>Finish obvious tripples</string>
+       <item row="11" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-         <property name="checked">
-          <bool>true</bool>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>1</height>
+          </size>
          </property>
-        </widget>
+        </spacer>
+       </item>
+       <item row="7" column="0">
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>1</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -434,6 +520,22 @@
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_3D_Field"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>hold right click and move: change perspective</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
