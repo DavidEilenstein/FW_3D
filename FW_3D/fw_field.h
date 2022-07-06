@@ -5,6 +5,7 @@
 #include <QString>
 #include <vector>
 #include <QDebug>
+#include <QGridLayout>
 
 using namespace std;
 
@@ -37,7 +38,10 @@ private:
     bool check_win(int x, int y, int z, int dx, int dy, int dz, char* w);
     bool check_tripple(int sx, int sy, int sz, int dx, int dy, int dz, char m_check, int *wx, int *wy, int* wz);
 
+    //data
     vector<vector<vector<char>>> vvvData;
+
+
 };
 
 #endif // FW_FIELD_H

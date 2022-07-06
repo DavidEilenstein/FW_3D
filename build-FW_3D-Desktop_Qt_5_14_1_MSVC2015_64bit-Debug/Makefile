@@ -263,11 +263,13 @@ Makefile: ..\FW_3D\FW_3D.pro ..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\win32-msv
 		..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\features\yacc.prf \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\features\lex.prf \
 		..\FW_3D\FW_3D.pro \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5DataVisualization.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Widgets.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Gui.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Core.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\qtmain.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\features\build_pass.prf \
+		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5DataVisualizationd.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Widgetsd.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Guid.prl \
 		..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Cored.prl \
@@ -452,11 +454,13 @@ Makefile: ..\FW_3D\FW_3D.pro ..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\win32-msv
 ..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\features\yacc.prf:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\features\lex.prf:
 ..\FW_3D\FW_3D.pro:
+..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5DataVisualization.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Widgets.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Gui.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Core.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\lib\qtmain.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\mkspecs\features\build_pass.prf:
+..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5DataVisualizationd.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Widgetsd.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Guid.prl:
 ..\..\..\..\Qt\5.14.1\msvc2015_64\lib\Qt5Cored.prl:

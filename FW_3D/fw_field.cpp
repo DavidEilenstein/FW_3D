@@ -70,14 +70,18 @@ bool FW_Field::insert_marker(int x, int y, char m)
 
 bool FW_Field::check_end(char *w)
 {
-    //TO DO
+    bool winner = check_winner(w);
+    if(winner)
+        return true;
+
     if(check_full())
     {
         *w = WIN_DRAW;
         return true;
     }
 
-    return check_winner(w);
+    *w = WIN_NOONE;
+    return false;
 }
 
 bool FW_Field::check_full()
@@ -224,7 +228,6 @@ bool FW_Field::check_tripples(int *wx, int *wy, int *wz, char m)
     if(check_tripple(   t, 0, 0,    -1,  1,  1,    m,      wx, wy, wz))     return true;
     if(check_tripple(   t, 0, t,    -1,  1, -1,    m,      wx, wy, wz))     return true;
 
-    qDebug() << "found no tripple";
     return false;
 }
 

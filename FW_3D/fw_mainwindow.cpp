@@ -7,6 +7,7 @@ FW_MainWindow::FW_MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    Plot_Init();
     init_field();
     Populate_CB_Single(ui->comboBox_Bot_Mode, QSL_Bots, BOT_TREE);
 
@@ -23,6 +24,7 @@ void FW_MainWindow::init_field()
     ConsolePrint("================ NEW GAME ================");
 
     Field.clear_init();
+    Plot_Clear();
 
     player_moves = 0;
 
@@ -85,6 +87,7 @@ void FW_MainWindow::MakeMove_Player(int x, int y)
 
     ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Player (white)");
     Field.insert_marker(x, y, MARKER_WHITE);
+    Plot_Show();
     FieldHighlight(x, y, MARKER_WHITE);
 
     player_moves++;
@@ -165,6 +168,7 @@ void FW_MainWindow::MakeMove_Bot()
 
     ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Bot (black)" + bot_comment);
     Field.insert_marker(x, y, MARKER_BLACK);
+    Plot_Show();
     FieldHighlight(x, y, MARKER_BLACK);
 
     if(check_end())
@@ -207,6 +211,21 @@ void FW_MainWindow::FieldHighlight(int x, int y, char m)
 
     qApp->processEvents();
     this->repaint();
+}
+
+bool FW_MainWindow::Plot_Init()
+{
+    return FieldPlot.init(ui->gridLayout_3D_Field);
+}
+
+void FW_MainWindow::Plot_Clear()
+{
+    FieldPlot.clear();
+}
+
+bool FW_MainWindow::Plot_Show()
+{
+    return FieldPlot.plot(&Field);
 }
 
 void FW_MainWindow::Populate_CB_Single(QComboBox *CB, QStringList QSL, int index_init)

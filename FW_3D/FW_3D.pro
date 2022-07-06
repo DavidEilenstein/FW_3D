@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += datavisualization
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,6 +21,7 @@ SOURCES += \
     fw_bot_random.cpp \
     fw_bot_tree.cpp \
     fw_field.cpp \
+    fw_field_plot.cpp \
     main.cpp \
     fw_mainwindow.cpp
 
@@ -29,6 +31,7 @@ HEADERS += \
     fw_bot_random.h \
     fw_bot_tree.h \
     fw_field.h \
+    fw_field_plot.h \
     fw_mainwindow.h
 
 FORMS += \

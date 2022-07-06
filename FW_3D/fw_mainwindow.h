@@ -7,6 +7,7 @@
 #include <QDateTime>
 #include <FW_Enum.h>
 #include <fw_field.h>
+#include <fw_field_plot.h>
 #include <fw_bot_random.h>
 #include <fw_bot_tree.h>
 #include <QDebug>
@@ -36,6 +37,10 @@ private slots:
     void MakeMove_Player(int x, int y);
     void MakeMove_Bot();
     void FieldHighlight(int x, int y, char m);
+
+    bool Plot_Init();
+    void Plot_Clear();
+    bool Plot_Show();
 
     void on_comboBox_Bot_Mode_currentIndexChanged(int index);
     void on_spinBox_Bot_Param_valueChanged(int arg1);
@@ -76,5 +81,6 @@ private:
     QStringList QSL_ConsoleText;
     const int consoleLimit = 1000;
 
+    FW_Field_Plot FieldPlot;
 };
 #endif // FW_MAINWINDOW_H
