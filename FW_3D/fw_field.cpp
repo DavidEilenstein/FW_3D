@@ -70,6 +70,7 @@ bool FW_Field::insert_marker(int x, int y, char m)
 
 bool FW_Field::check_end(char *w)
 {
+    //TO DO
     if(check_full())
     {
         *w = WIN_DRAW;
@@ -254,7 +255,7 @@ bool FW_Field::check_win(int x, int y, int z, int dx, int dy, int dz, char *w)
     return true;
 }
 
-bool FW_Field::check_tripple(int sx, int sy, int sz, int dx, int dy, int dz, char m, int *wx, int *wy, int *wz)
+bool FW_Field::check_tripple(int sx, int sy, int sz, int dx, int dy, int dz, char m_check, int *wx, int *wy, int *wz)
 {
     //s start
     //d step
@@ -264,39 +265,52 @@ bool FW_Field::check_tripple(int sx, int sy, int sz, int dx, int dy, int dz, cha
     int y = sy;
     int z = sz;
 
-    int miss_count = 0;
+    int empty_count = 0;
     for(int i = 0; i < FIELD_SIZE; i++)
     {
-        //miss?
-        if(get_marker(x, y, z) != m)
+        //marker at checked pos
+        int m_at_pos = get_marker(x, y, z);
+
+        //not the checked marker?
+        if(m_at_pos != m_check)
         {
-            //non empty marker? -> allready blocked
-            if(get_marker(x, y, z) != MARKER_EMPTY)
+            //empty or another amerker?
+            if(m_at_pos == MARKER_EMPTY)
+            {
+                //increment empty
+                empty_count++;
+
+                //more than 1 empty? -> no way for tripple
+                if(empty_count > 1)
+                    return false;
+
+                //remember pos of possible win marker
+                *wx = x;
+                *wy = y;
+                *wz = z;
+            }
+            else
+            {
                 return false;
-
-            miss_count++;
+            }
         }
-
-        //first miss could be the one missing to win
-        if(miss_count == 1)
-        {
-            *wx = x;
-            *wy = y;
-            *wz = z;
-        }
-
-        //more than 1 miss? -> no way for tripple
-        if(miss_count > 1)
-            return false;
 
         x += dx;
         y += dy;
         z += dz;
     }
 
-    if(miss_count == 1)
+    if(empty_count == 1)
+    {
         if(get_first_empty_index(*wx, *wy) == *wz)
+        {
             return true;
+        }
+        else
+        {
+            qDebug() << "possible tripple but impossible to set marker x/y/z" << *wx << *wy << *wz << "lowest free level" << get_first_empty_index(*wx, *wy);
+        }
+    }
 
     return false;
 }

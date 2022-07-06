@@ -63,7 +63,7 @@ bool FW_Bot_Tree::try_subtrees(FW_Field field, int *x_best, int *y_best, double 
     vector<int> v_best_subtree_x;
     vector<int> v_best_subtree_y;
     double sum_subtrees_scores = 0;
-    int subtrees_tried = 0;
+    double sum_subtrees_weights = 0;
 
     //loop subtrees
     for(int x = 0; x < FIELD_SIZE; x++)
@@ -95,9 +95,22 @@ bool FW_Bot_Tree::try_subtrees(FW_Field field, int *x_best, int *y_best, double 
                     try_subtrees(field_copy, &subtree_x, &subtree_y, &subtree_score, next_marker == MARKER_BLACK ? MARKER_WHITE : MARKER_BLACK, current_depth + 1);
                 }
 
-                //count up subtree tries
-                subtrees_tried++;
-                sum_subtrees_scores += subtree_score;
+                //cumulate subtree scores
+                if(next_marker == MARKER_BLACK)
+                {
+                    //bot's move:
+                    //no weight needed, bot can chose
+                    sum_subtrees_weights += 1.0;
+                    sum_subtrees_scores += subtree_score * 1.0;
+                }
+                else
+                {
+                    //human's move:
+                    //assume human prefers moves that are bad for the bot
+                    double weight = 1.0 - subtree_score;
+                    sum_subtrees_weights += weight;
+                    sum_subtrees_scores += subtree_score * weight;
+                }
 
                 //better score? -> set as new best move
                 if(subtree_score > best_subtree_score)
@@ -119,7 +132,7 @@ bool FW_Bot_Tree::try_subtrees(FW_Field field, int *x_best, int *y_best, double 
     }
 
     //no valid subtrees found? -> end
-    if(subtrees_tried == 0)
+    if(sum_subtrees_weights == 0)
         return false;
 
     //pick one of the possible best moves at random (confuse the humans^^)
@@ -129,7 +142,7 @@ bool FW_Bot_Tree::try_subtrees(FW_Field field, int *x_best, int *y_best, double 
     *y_best = v_best_subtree_y[i_pick];
 
     //calc score and happy end
-    *score = sum_subtrees_scores / subtrees_tried;
+    *score = sum_subtrees_scores / sum_subtrees_weights;
     return true;
 }
 

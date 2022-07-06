@@ -43,7 +43,7 @@ bool FW_MainWindow::check_end()
         ConsolePrint("Nice match! It is a draw.");
 
     ConsolePrint(": : : : : : : : : : : : : : : : : : : : : : : : : : :");
-    ui->groupBox_FieldControl->setEnabled(true);
+    ui->groupBox_FieldControl->setEnabled(false);
     ui->groupBox_BotSettings->setEnabled(true);
 
     return true;
@@ -79,6 +79,7 @@ void FW_MainWindow::MakeMove_Player(int x, int y)
         ConsolePrint("Are you blind??? " + QS_xy + " is a full stack...");
         return;
     }
+
 
     ConsolePrint(QS_xy + " - level " + QString::number(Field.get_first_empty_index(x, y)) + " - Player (white)");
     Field.insert_marker(x, y, MARKER_WHITE);
@@ -177,6 +178,9 @@ void FW_MainWindow::FieldHighlight(int x, int y, char m)
     ui->pushButton_Field_31->setStyleSheet(x == 3 && y == 1 ? stylesheet : "");
     ui->pushButton_Field_32->setStyleSheet(x == 3 && y == 2 ? stylesheet : "");
     ui->pushButton_Field_33->setStyleSheet(x == 3 && y == 3 ? stylesheet : "");
+
+    qApp->processEvents();
+    this->repaint();
 }
 
 void FW_MainWindow::Populate_CB_Single(QComboBox *CB, QStringList QSL, int index_init)

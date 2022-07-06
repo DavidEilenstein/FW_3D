@@ -35,7 +35,7 @@ public:
 private:
 
     bool check_win(int x, int y, int z, int dx, int dy, int dz, char* w);
-    bool check_tripple(int sx, int sy, int sz, int dx, int dy, int dz, char m, int *wx, int *wy, int* wz);
+    bool check_tripple(int sx, int sy, int sz, int dx, int dy, int dz, char m_check, int *wx, int *wy, int* wz);
 
     vector<vector<vector<char>>> vvvData;
 };
