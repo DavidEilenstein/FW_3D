@@ -73,7 +73,7 @@ bool FW_Field_Plot::plot(FW_Field *pField)
         if(i == MARKER_BOT || i == MARKER_PLAYER)
             vSeries[i]->setItemSize(0.90);
         else
-            vSeries[i]->setItemSize(0.15);
+            vSeries[i]->setItemSize(0.05);
 
         //series to graph
         graph_scatter->addSeries(vSeries[i]);
