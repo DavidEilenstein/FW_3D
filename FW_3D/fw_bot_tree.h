@@ -6,7 +6,6 @@
 #include <vector>
 #include <QRandomGenerator>
 #include <QDateTime>
-#include <thread>
 
 using namespace std;
 

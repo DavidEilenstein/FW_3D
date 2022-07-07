@@ -328,7 +328,7 @@ public:
         spinBox_Bot_Param->setObjectName(QString::fromUtf8("spinBox_Bot_Param"));
         spinBox_Bot_Param->setButtonSymbols(QAbstractSpinBox::NoButtons);
         spinBox_Bot_Param->setMinimum(1);
-        spinBox_Bot_Param->setMaximum(10);
+        spinBox_Bot_Param->setMaximum(12);
         spinBox_Bot_Param->setValue(6);
 
         gridLayout_4->addWidget(spinBox_Bot_Param, 2, 0, 1, 1);
